@@ -9,13 +9,14 @@ public class Main {
 		sll.insert(2);
 		sll.insert(3);
 		sll.insert(4);
-		sll.insert(2);
-		sll.insert(5);
-		sll.insert(3);
+//		sll.insert(2);
+//		sll.insert(5);
+//		sll.insert(3);
 		sll.traversal();
 //		deleteDuplicate(sll);
-		deleteDuplicateOptimised(sll);
-		sll.traversal();
+//		deleteDuplicateOptimised(sll);
+		System.out.println(nthValueFromLastNode(sll,2)); 
+//		sll.traversal();
 
 	}
 //	Delete Duplicate entries
@@ -53,5 +54,13 @@ public class Main {
 		}
 	}
 	
+	public static int nthValueFromLastNode(SinglyLinkedList sll,int n) {
+		Node node = sll.head;
+		for(int i=0;i<sll.size-n-1;i++) {
+			node=node.next;
+		}
+		return node.value;
+		
+	}
 
 }
