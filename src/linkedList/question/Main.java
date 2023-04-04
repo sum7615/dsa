@@ -13,30 +13,24 @@ public class Main {
 		sll.traversal();
 		deleteDuplicate(sll);
 		sll.traversal();
-		
 
 	}
 //	Delete Duplicate entries
 
 	public static void deleteDuplicate(SinglyLinkedList sll) {
-	  Node node =sll.head;
-	  while(node!=null) {
-		  Node runner = node.next;
-		  Node prevRunner = node;
-		  if(runner.value==runner.value) {
-			  prevRunner.next=
-		  }
-		  
-		  node=node.next;
-	  }
+		Node temp =sll.head;
+		while(temp!=null) {
+			Node secondNode = temp;
+			while(secondNode.next!=null) {
+				if(secondNode.next.value==temp.value) {
+					secondNode.next=secondNode.next.next;
+					sll.size--;
+				}else {
+					secondNode=secondNode.next;
+				}
+			}
+			temp=temp.next;
+		}
 	}
 
-	
-	
-	
-	
-	
-	
-	
-	
 }
