@@ -1,5 +1,7 @@
 package linkedList.question;
 
+import java.util.HashSet;
+
 public class Main {
 	public static void main(String[] args) {
 		SinglyLinkedList sll = new SinglyLinkedList();
@@ -11,12 +13,14 @@ public class Main {
 		sll.insert(5);
 		sll.insert(3);
 		sll.traversal();
-		deleteDuplicate(sll);
+//		deleteDuplicate(sll);
+		deleteDuplicateOptimised(sll);
 		sll.traversal();
 
 	}
 //	Delete Duplicate entries
 
+//	O(N^2)
 	public static void deleteDuplicate(SinglyLinkedList sll) {
 		Node temp =sll.head;
 		while(temp!=null) {
@@ -32,5 +36,22 @@ public class Main {
 			temp=temp.next;
 		}
 	}
+//	Time: O(N), Space:O(N)
+	public static void deleteDuplicateOptimised(SinglyLinkedList sll) {
+		HashSet<Integer> set = new HashSet<Integer>();
+		Node temp = sll.head;
+		Node prev =null;
+		while(temp!=null) {
+			if(set.contains(temp.value)&&prev!=null) {
+				prev.next=temp.next;
+				sll.size--;
+			}else {
+				set.add(temp.value);
+				prev=temp;
+			}
+			temp=temp.next;
+		}
+	}
+	
 
 }
