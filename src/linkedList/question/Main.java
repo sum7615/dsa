@@ -49,6 +49,7 @@ public class Main {
 		int num2 = numberFormation(sl1);
 		int sum = num1 + num2;
 		SinglyLinkedList result = new SinglyLinkedList();
+		
 		while (sum > 0) {
 			int n = sum % 10;
 			Node node = new Node();
@@ -56,10 +57,13 @@ public class Main {
 			if (result.head == null) {
 				result.head = node;
 				result.tail = node;
+				
 			} else {
-				node.next = result.head;
-				result.head = node;
+				node.next = null;
+				result.tail.next=node;
+				result.tail = node;
 			}
+			result.size++;
 			sum /= 10;
 		}
 		return result;
