@@ -25,48 +25,91 @@ public class Main {
 
 		SinglyLinkedList sll = new SinglyLinkedList();
 		SinglyLinkedList sll1 = new SinglyLinkedList();
-
+		Node n1= new Node();
+		Node n2= new Node();
+		n1.value=1;
+		n2.value=2;
 		sll.create(3);
-		sll.insert(2);
-		sll.insert(1);
+		sll.inserNode(n1);
+		sll.inserNode(n2);
 
 		sll1.create(8);
-		sll1.insert(2);
-		sll1.insert(1);
-//		sll1.traversal();
+		sll1.insert(9);
+		sll1.inserNode(n1);
+		sll1.inserNode(n2);
 
 //		int kk = numberFormation(sll1);
 //		System.out.println(kk);
+
+		// sum
 
 //		SinglyLinkedList res = sum(sll, sll1);
 //		res.traversal();
 //		SinglyLinkedList res1 = sumLists(sll, sll1);
 //		res1.traversal();
 
+		// Inter saction
+
+		inter(sll, sll1).traversal();
 
 	}
-	
+
 //find intersacting node
-	
+
 	public static SinglyLinkedList inter(SinglyLinkedList sl, SinglyLinkedList sl1) {
+		int sizeDiff = Math.abs(sl.size - sl1.size);
+		if (sizeDiff > 0) {
+			if (sl.size > sl1.size) {
+				Node n1 = sl.head;
+				for (int i = 0; i < sizeDiff; i++) {
+					Node temp = n1.next;
+					sl.head.next = null;
+					sl.head = temp;
+					sl.size--;
+					n1 = temp;
+				}
+			} else if (sl1.size > sl.size) {
+
+				Node n1 = sl1.head;
+				for (int i = 0; i < sizeDiff; i++) {
+					Node temp = n1.next;
+					sl1.head.next = null;
+					sl1.head = temp;
+					sl1.size--;
+					n1 = temp;
+				}
+			}else {
+				
+			}
+		}
+		return findInter(sl, sl1);
+	}
+
+	public static SinglyLinkedList findInter(SinglyLinkedList sl, SinglyLinkedList sl1) {
 		SinglyLinkedList result = new SinglyLinkedList();
-		int sizeDiff = Math.abs(sl.size-sl1.size);
-		
-		
-		
+		if(sl.tail!=sl1.tail) {
+			return result;
+		}
+		Node num1 = sl.head;
+		Node num2 = sl1.head;
+		while (num1 != null) {
+			if (num1 == num2) {
+				result.insert(num1.value);
+			}
+			num1 = num1.next;
+			num2=num2.next;
+		}
 		return result;
 	}
-	
-	
-	
+
 //	sum of 2 singly linked list and create another linkedlist by the sum in reverse order TIme Complexity O(N)
-	
+
 	public static SinglyLinkedList sum(SinglyLinkedList sl, SinglyLinkedList sl1) {
 		int num1 = numberFormation(sl);
 		int num2 = numberFormation(sl1);
 		int sum = num1 + num2;
 		SinglyLinkedList result = new SinglyLinkedList();
-		
+
 		while (sum > 0) {
 			int n = sum % 10;
 			Node node = new Node();
@@ -74,10 +117,10 @@ public class Main {
 			if (result.head == null) {
 				result.head = node;
 				result.tail = node;
-				
+
 			} else {
 				node.next = null;
-				result.tail.next=node;
+				result.tail.next = node;
 				result.tail = node;
 			}
 			result.size++;
@@ -91,10 +134,11 @@ public class Main {
 	public static int numberFormation(SinglyLinkedList sl) {
 		return reverseTraversal(sl.head);
 	}
+
 // Generating revrse order linkedlist from a number , 921 => 1->2->9
 	public static int reverseTraversal(Node node) {
 		if (node == null) {
-			
+
 			return 0;
 		}
 		int num = reverseTraversal(node.next);
@@ -102,48 +146,43 @@ public class Main {
 		return num;
 	}
 
-	
-//	sum of 2 singly linked list and create another linkedlist by the sum in reverse order 
-//	Optimised way. TIme Complexity O(N)
-	
-	
+//	sum of 2 singly linked list and create another linkedlist by the sum in reverse order . Optimised way. TIme Complexity O(N)
+
 	public static SinglyLinkedList sumLists(SinglyLinkedList sl, SinglyLinkedList sl1) {
 		SinglyLinkedList result = new SinglyLinkedList();
-	
-		Node num1= sl.head;
+
+		Node num1 = sl.head;
 		Node num2 = sl1.head;
-		int carry=0;
-		while(num1!=null || num2!=null) {
+		int carry = 0;
+		while (num1 != null || num2 != null) {
 			int sum = carry;
-			if(num1!=null) {
-				sum+=num1.value;
-				num1=num1.next;
+			if (num1 != null) {
+				sum += num1.value;
+				num1 = num1.next;
 			}
-			if(num2!=null) {
-				sum+=num2.value;
-				num2=num2.next;
+			if (num2 != null) {
+				sum += num2.value;
+				num2 = num2.next;
 			}
-			
-			Node node =new Node();
-			node.value=sum%10;
+
+			Node node = new Node();
+			node.value = sum % 10;
 			if (result.head == null) {
 				result.head = node;
 				result.tail = node;
 				result.size++;
-				
+
 			} else {
 				node.next = null;
-				result.tail.next=node;
+				result.tail.next = node;
 				result.tail = node;
 				result.size++;
 			}
-			carry=sum/10;
+			carry = sum / 10;
 		}
 		return result;
 	}
-	
-	
-	
+
 //	Delete Duplicate entries
 
 //	O(N^2)

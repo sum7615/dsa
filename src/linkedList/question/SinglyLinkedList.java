@@ -28,6 +28,10 @@ public class SinglyLinkedList {
 	}
 
 	public void traversal() {
+		if(head==null) {
+			System.out.println("No node");
+			return;
+		}
 		Node temp = head;
 		for (int i = 0; i < size; i++) {
 			System.out.print(temp.value);
@@ -92,6 +96,12 @@ public class SinglyLinkedList {
 		}else {
 			System.out.println("Not initialized");
 		}
+	}
+	public void inserNode(Node node) {
+		
+		tail.next=node;
+		tail=node;
+		size++;
 	}
 		
 }
