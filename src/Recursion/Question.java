@@ -7,7 +7,8 @@ public class Question {
 //		int[] arr = { 1, 2, 3, 4 };
 //		System.out.println(productofArray(arr, arr.length));
 //		System.out.println(recursiveRange(4));
-		System.out.println(fib(35));
+//		System.out.println(fib(35));
+		System.out.println(reverse("suman"));
 	}
 
 	public static int power(int base, int exception) {
@@ -40,10 +41,17 @@ public class Question {
 	}
 
 	public static int fib(int n) {
-		if(n<=1) {
+		if (n <= 1) {
 			return n;
 		}
-		return fib(n-1)+fib(n-2);
+		return fib(n - 1) + fib(n - 2);
+	}
+
+	public static String reverse(String str) {
+		if (str.isEmpty()) {
+			return str;
+		}
+		return reverse(str.substring(1))+str.charAt(0);
 	}
 
 }
