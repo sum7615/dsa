@@ -23,20 +23,20 @@ public class Main {
 //		SinglyLinkedList ll = partition(sll, 5);
 //		ll.traversal();
 
-		SinglyLinkedList sll = new SinglyLinkedList();
-		SinglyLinkedList sll1 = new SinglyLinkedList();
-		Node n1= new Node();
-		Node n2= new Node();
-		n1.value=1;
-		n2.value=2;
-		sll.create(3);
-		sll.inserNode(n1);
-		sll.inserNode(n2);
-
-		sll1.create(8);
-		sll1.insert(9);
-		sll1.inserNode(n1);
-		sll1.inserNode(n2);
+//		SinglyLinkedList sll = new SinglyLinkedList();
+//		SinglyLinkedList sll1 = new SinglyLinkedList();
+//		Node n1= new Node();
+//		Node n2= new Node();
+//		n1.value=1;
+//		n2.value=2;
+//		sll.create(3);
+//		sll.inserNode(n1);
+//		sll.inserNode(n2);
+//
+//		sll1.create(8);
+//		sll1.insert(9);
+//		sll1.inserNode(n1);
+//		sll1.inserNode(n2);
 
 //		int kk = numberFormation(sll1);
 //		System.out.println(kk);
@@ -50,11 +50,18 @@ public class Main {
 
 		// Inter saction
 
-		inter(sll, sll1).traversal();
+//		inter(sll, sll1).traversal();
+		
+		
+		SinglyLinkedList rand = new SinglyLinkedList();
+		rand.insertRecursively(5);
+		rand.traversal();
 
 	}
-
-//find intersacting node
+	
+	
+	
+//find intersacting node. time Complexity O(N)
 
 	public static SinglyLinkedList inter(SinglyLinkedList sl, SinglyLinkedList sl1) {
 		int sizeDiff = Math.abs(sl.size - sl1.size);
