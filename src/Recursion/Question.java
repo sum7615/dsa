@@ -4,8 +4,10 @@ public class Question {
 	public static void main(String[] args) {
 //		System.out.println(power(2, 3));
 //		System.out.println(factorial(4));
-		int[] arr= {1,2,3,4};
-		System.out.println(productofArray(arr,arr.length));
+//		int[] arr = { 1, 2, 3, 4 };
+//		System.out.println(productofArray(arr, arr.length));
+//		System.out.println(recursiveRange(4));
+		System.out.println(fib(35));
 	}
 
 	public static int power(int base, int exception) {
@@ -23,10 +25,25 @@ public class Question {
 	}
 
 	public static int productofArray(int A[], int N) {
-		if(N==0) {
+		if (N == 0) {
 			return 1;
 		}
-		return A[N-1]*productofArray(A, N-1);
-		
+		return A[N - 1] * productofArray(A, N - 1);
+
 	}
+
+	public static int recursiveRange(int num) {
+		if (num == 0) {
+			return 0;
+		}
+		return num + recursiveRange(num - 1);
+	}
+
+	public static int fib(int n) {
+		if(n<=1) {
+			return n;
+		}
+		return fib(n-1)+fib(n-2);
+	}
+
 }
