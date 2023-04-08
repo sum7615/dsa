@@ -30,7 +30,9 @@ public class ArrayLists {
 		
 //		intArrayList.add(4,4);     //inserting at the index which is greater then size. so it will give exception 
 		
+//		Accessing element by get(index) method. Time and space complexity O(N)
 		
+		System.out.println(intArrayList.get(0));
 		
 	}
 }
