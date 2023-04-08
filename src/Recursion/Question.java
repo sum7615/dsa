@@ -8,7 +8,8 @@ public class Question {
 //		System.out.println(productofArray(arr, arr.length));
 //		System.out.println(recursiveRange(4));
 //		System.out.println(fib(35));
-		System.out.println(reverse("suman"));
+//		System.out.println(reverse("suman"));
+		System.out.println(isPalindrome("sps"));
 	}
 
 	public static int power(int base, int exception) {
@@ -51,7 +52,19 @@ public class Question {
 		if (str.isEmpty()) {
 			return str;
 		}
-		return reverse(str.substring(1))+str.charAt(0);
+		return reverse(str.substring(1)) + str.charAt(0);
+	}
+
+	public static boolean isPalindrome(String s) {
+		 if(s.length() == 0 || s.length() == 1) {
+	           return true; 
+		 }
+  
+         if(s.charAt(0) == s.charAt(s.length()-1)) {
+        	 return isPalindrome(s.substring(1, s.length()-1));
+         }
+        
+         return false;
 	}
 
 }
