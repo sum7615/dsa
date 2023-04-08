@@ -23,7 +23,7 @@ public class ArrayLists {
 //		intserting at Array List
 		
 //		using add(element) method. Time and space complexity is O(1)
-		intArrayList.add(1);
+		intArrayList.add(110);
 		intArrayList.add(2);// insertig at the end
 		
 //		using add(index,element) method. Time complexity is ON1) and space complexity is O(1)
@@ -64,15 +64,27 @@ public class ArrayLists {
 //		Searching an element. Time complexity O(N) and space complexity O(1)
 		
 		//forEach loop
-		for(int i: intArrayList ) {
-			if(i==10) {
-				System.out.println("Found");
-				break;
-			}else {
-				System.out.println("Not found");
-				break;
-			}
-		}
+//		for(int i: intArrayList ) {
+//			if(i==10) {
+//				System.out.println("Found");
+//				break;
+//			}else {
+//				System.out.println("Not found");
+//				break;
+//			}
+//		}
+		
+		
+//		Removing an element from ArrayList. Time complexity O(N) and space complexity O(1)
+		
+//		using remove(index) 
+		intArrayList.remove(1);
+		
+//		using remove(object/element) 
+		System.out.println(intArrayList.remove(Integer.valueOf(20)));//in case of we have to use Integer.valueOf(element) to define element. 
+		
+		
+		
 		
 	}
 }
