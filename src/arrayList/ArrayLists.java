@@ -34,33 +34,45 @@ public class ArrayLists {
 		System.out.println(intArrayList);
 //		Accessing element by get(index) method. Time complexity O(1) and space complexity O(1)
 		
-		System.out.println(intArrayList.get(0));
+//		System.out.println(intArrayList.get(0));
 		
 		
 //		Traversal of ArrayList. Time complexity O(N) and space complexity O(1)
 		
 //		for loop
-		System.out.println("By for loop");
-		for(int i=0;i<intArrayList.size();i++) {
-			System.out.println(intArrayList.get(i));
-		}
-		System.out.println();
+//		System.out.println("By for loop");
+//		for(int i=0;i<intArrayList.size();i++) {
+//			System.out.println(intArrayList.get(i));
+//		}
+//		System.out.println();
 		
 //		forEach loop
-		System.out.println("By forEach loop");
-		for (Integer i : intArrayList) {
-			System.out.println(i);
-		}
-		System.out.println();
+//		System.out.println("By forEach loop");
+//		for (Integer i : intArrayList) {
+//			System.out.println(i);
+//		}
+//		System.out.println();
 		
 //		iterator
-		System.out.println("By Iterator");
-		Iterator<Integer> itr = intArrayList.iterator();
-		while(itr.hasNext()) {
-			System.out.println(itr.next());
-		}
-		System.out.println();
+//		System.out.println("By Iterator");
+//		Iterator<Integer> itr = intArrayList.iterator();
+//		while(itr.hasNext()) {
+//			System.out.println(itr.next());
+//		}
+//		System.out.println();
 		
+//		Searching an element. Time complexity O(N) and space complexity O(1)
+		
+		//forEach loop
+		for(int i: intArrayList ) {
+			if(i==10) {
+				System.out.println("Found");
+				break;
+			}else {
+				System.out.println("Not found");
+				break;
+			}
+		}
 		
 	}
 }
