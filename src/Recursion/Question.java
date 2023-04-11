@@ -55,6 +55,7 @@ public class Question {
 		return reverse(str.substring(1)) + str.charAt(0);
 	}
 
+	
 	public static boolean isPalindrome(String s) {
 		 if(s.length() == 0 || s.length() == 1) {
 	           return true; 
