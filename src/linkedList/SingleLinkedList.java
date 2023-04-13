@@ -48,7 +48,7 @@ public class SingleLinkedList {
 			Node temp = head;
 			if(temp.next!=null) {
 			for(int i=0;i<size;i++) {
-				System.out.print(temp.value);
+				System.out.print(temp.value+"=>");
 				temp=temp.next;
 			}
 			}
@@ -121,4 +121,34 @@ public class SingleLinkedList {
 		size=0;
 		System.out.println("Whole LikedList deleted");
 	}
+	public void insertRec(int index,int nodeValue) {
+		
+		insertRec(index,nodeValue,head);
+	}
+	public Node insertRec(int index,int nodeValue, Node node) {
+		if(index==0) {
+			Node newNode = new Node();
+			newNode.value=nodeValue;
+			if(node!=null) {
+				if(node==head) {
+					newNode.next=head;
+					head=newNode;
+				}else {
+					newNode.next=node.next;
+					node.next=newNode;
+				}
+
+			}else if(node==null) {
+				tail.next=newNode;
+				newNode.next=null;
+				tail=newNode;
+			}
+			size++;
+			return newNode;
+	
+		}
+			return insertRec(index-1,nodeValue,node.next);
+	}
+	
+	
 }
