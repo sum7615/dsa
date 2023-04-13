@@ -21,7 +21,7 @@ public class Main {
 //		sll.treaversal();
 //		sll.deleteEntireLinkedList();
 		sll.treaversal();
-	sll.insertRec(0, 78);
+	sll.insertRec(1, 78);
 		sll.treaversal();
 //		Circular Single LinkedList
 //		CircularSingleLinkedList csll = new CircularSingleLinkedList();

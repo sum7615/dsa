@@ -123,31 +123,29 @@ public class SingleLinkedList {
 	}
 	public void insertRec(int index,int nodeValue) {
 		
-		insertRec(index,nodeValue,head);
+		insertRec(index,nodeValue,head,head);
 	}
-	public Node insertRec(int index,int nodeValue, Node node) {
+	public Node insertRec(int index,int nodeValue, Node node,Node prev) {
 		if(index==0) {
 			Node newNode = new Node();
-			newNode.value=nodeValue;
-			if(node!=null) {
-				if(node==head) {
-					newNode.next=head;
-					head=newNode;
-				}else {
-					newNode.next=node.next;
-					node.next=newNode;
-				}
+	        newNode.value = nodeValue;
+	        if (node == head) {
+	            newNode.next = head;
+	            head = newNode;
+	        } else if (node == null) {
+	            tail.next = newNode;
+	            tail = newNode;
+	            newNode.next=null;
+	        } else {
+	            newNode.next = node;
+	            prev.next = newNode;
 
-			}else if(node==null) {
-				tail.next=newNode;
-				newNode.next=null;
-				tail=newNode;
-			}
-			size++;
-			return newNode;
+	        }
+	        size++;
+	        return node;
 	
 		}
-			return insertRec(index-1,nodeValue,node.next);
+			return insertRec(index-1,nodeValue,node.next,node);
 	}
 	
 	
