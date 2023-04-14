@@ -143,8 +143,6 @@ public class SingleLinkedList {
 	        }
 	        size++;
 	        return node;
-	
-
 		}
 			return insertRec(index-1,nodeValue,node.next,node);
 	}
