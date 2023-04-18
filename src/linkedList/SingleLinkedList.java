@@ -138,7 +138,6 @@ public class SingleLinkedList {
 	            newNode.next=null;
 	        } else {
 	            newNode.next = node;
-	            
 	            prev.next = newNode;
 
 	        }
