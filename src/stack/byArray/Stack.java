@@ -29,7 +29,7 @@ public class Stack {
 		if (isFull()) {
 			System.out.println("Stack is full");
 		} else {
-			arr[topOfStack] = value;
+			arr[topOfStack+1] = value;
 			topOfStack++;
 		}
 
