@@ -5,8 +5,8 @@ public class Stack {
 	int[] arr;
 
 	public Stack(int size) {
-		arr = new int[size];
-		topOfStack = -1;
+		this.arr = new int[size];
+		this.topOfStack = -1;
 	}
 
 	public boolean isFull() {
