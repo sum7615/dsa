@@ -1,68 +1,37 @@
 package linkedList;
 
-
-
 public class Pract {
 	public Node head;
 	public Node tail;
 	public int size;
 
-	public void insertSinglyLinkedList(int nodeValue) {
-		
+	public Node insertSinglyLinkedList(int nodeValue) {
+		head = new Node();
 		Node node = new Node();
-		node.value = nodeValue;
 		node.next = null;
+		node.value = nodeValue;
 		head = node;
 		tail = node;
 		size = 1;
+		return head;
 	}
 
 	public void push(int nodeValue) {
 		if (head == null) {
 			insertSinglyLinkedList(nodeValue);
+			return;
 		} else {
 			Node node = new Node();
 			node.value = nodeValue;
+			node.next = null;
 			tail.next = node;
 			tail = node;
 			size++;
-			System.out.println("Success");
 		}
 
 	}
 
-	public Node pop() {
-		
-		if (size == 0 ) {
-			System.out.println("No node to delete");
-			return null;
-		} else if (head == tail) {
-			Node res1 = head;
-			head = null;
-			tail = null;
-			size--;
-			return res1;
-		} else {
-			
-			Node res = tail;
-			
-			Node prev = head;
-			for (int i = 0; i < size-1; i++) {
-				prev = prev.next;
-			}
-			
-			prev.next = null;
-			tail = prev;
-			size=size-1;
-			if (size == 0) {
-				head = null;
-			}
-			
-			System.out.println("Deleted");
-			System.out.println("Size= "+size);
-			return res;
-		}
-	}
+	// Insert
 
 	public void traversal() {
 		if (head == null) {
@@ -79,16 +48,59 @@ public class Pract {
 		}
 		System.out.println();
 	}
+
+	public boolean insert(int data, int index) {
+		if (index < 0 || index > size) {
+			System.out.println("Invalid index");
+			return false;
+		}
+		Node node = new Node();
+		node.value = data;
+
+		if (head == null) {
+			System.out.println("creating the first node");
+			node.next = null;
+			head = node;
+			tail = node;
+			size = 1;
+			return true;
+		} else if (index == 0) {
+			System.out.println("Inserting at head");
+			node.next = head;
+			head = node;
+			size++;
+			return true;
+		} else if (index >= size) {
+			System.out.println("inserting at tail");
+			tail.next = node;
+			tail = node;
+			size++;
+			return true;
+		} else {
+			System.out.println("inserting at "+index);
+			System.out.println("head : "+head.value);
+			Node prev = head;
+			for (int i = 1; i < index-1; i++) {
+				prev = prev.next;
+				System.out.println(prev.value);
+			}
+			node.next = prev.next;
+			prev.next = node;
+			size++;
+			return true;
+		}
+
+	}
+
 	public static void main(String[] args) {
 		Pract pre = new Pract();
-		pre.push(1);
-		pre.push(2);
-		pre.push(3);
-		pre.push(4);
 		pre.push(5);
+		pre.push(10);
+		pre.push(15);
+		pre.push(20);
 		pre.traversal();
-		Node res =pre.pop();
-		System.out.println(res.value);
+
+		pre.insert(12, 2);
 
 		pre.traversal();
 
