@@ -20,9 +20,9 @@ public class Main {
 //		sll.deleteNode(5);
 //		sll.treaversal();
 //		sll.deleteEntireLinkedList();
-		sll.treaversal();
-	sll.insertRec(1, 78);
-		sll.treaversal();
+//		sll.treaversal();
+//	sll.insertRec(1, 78);
+//		sll.treaversal();
 //		Circular Single LinkedList
 //		CircularSingleLinkedList csll = new CircularSingleLinkedList();
 //		csll.createCircularLinkedList(1);
@@ -35,6 +35,13 @@ public class Main {
 //		csll.delete(6);
 //		csll.deleteEntireCircularLinkedList();
 //		csll.traversal();
+		
+		sll.treaversal();
+		LeetCode leetCode = new LeetCode();
+		leetCode.revMedium(sll.head, 4, 6);
+		sll.treaversal();
+		
+		
 		
 	}
 

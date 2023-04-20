@@ -48,8 +48,13 @@ public class SingleLinkedList {
 			Node temp = head;
 			if(temp.next!=null) {
 			for(int i=0;i<size;i++) {
-				System.out.print(temp.value+"=>");
+				System.out.print(temp.value);
 				temp=temp.next;
+				if(i<size-1) {
+					System.out.print("=>");
+				}
+				
+				
 			}
 			}
 		}
@@ -148,6 +153,7 @@ public class SingleLinkedList {
 		}
 			return insertRec(index-1,nodeValue,node.next,node);
 	}
+	
 	
 	
 }
