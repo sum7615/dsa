@@ -9,5 +9,16 @@ public class Queue {
 		this.topOfQueue=-1;
 		this.beginingofQueue=-1;
 	}
-
+	public boolean isFull() {
+		if(topOfQueue==arr.length-1) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+	public void enQueue(int value) {
+		if(isFull()) {
+			System.out.println("Queue is full");
+		}
+	}
 }
