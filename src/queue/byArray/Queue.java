@@ -16,9 +16,27 @@ public class Queue {
 			return false;
 		}
 	}
+	public boolean isEmpty() {
+		if(topOfQueue==-1) {
+			return true;
+		}else {
+			return false;
+		}
+	}
 	public void enQueue(int value) {
 		if(isFull()) {
 			System.out.println("Queue is full");
+		}else if(isEmpty()) {
+			topOfQueue++;
+			beginingofQueue=0;
+			arr[topOfQueue]=value;
+			System.out.println("Added");
+			return;
+		}else {
+			topOfQueue++;
+			arr[topOfQueue]=value;
+			System.out.println("Added");
+			return;
 		}
 	}
 }
