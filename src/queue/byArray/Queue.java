@@ -23,6 +23,7 @@ public class Queue {
 			return false;
 		}
 	}
+	
 	public void enQueue(int value) {
 		if(isFull()) {
 			System.out.println("Queue is full");
