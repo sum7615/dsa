@@ -24,6 +24,7 @@ public class Queue {
 		}
 	}
 	
+	
 	public void enQueue(int value) {
 		if(isFull()) {
 			System.out.println("Queue is full");
