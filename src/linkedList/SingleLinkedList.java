@@ -23,6 +23,7 @@ public class SingleLinkedList {
 			newNode.next = head;
 			head = newNode;
 		} else if (index >= size) {
+
 			newNode.next = null;
 			tail.next=newNode;
 			tail=newNode;
@@ -42,26 +43,16 @@ public class SingleLinkedList {
 	
 	
 	public void treaversal() {
-		if(size<=0 || head.next==null) {
-			System.out.println("LinkedList have not initialized");
-		}else {
+
 			Node temp = head;
-			if(temp.next!=null) {
-			for(int i=0;i<size;i++) {
+			while(temp!=null) {
 				System.out.print(temp.value);
 				temp=temp.next;
-				if(i<size-1) {
-					System.out.print("=>");
-				}
-				
-				
 			}
-			}
+
 		}
 		
-		System.out.println();
-//		System.out.println("Size: "+size);
-	}
+
 	public int search(int nodeValue) {
 		if(head==null) {
 			System.out.println("Not initialized");
