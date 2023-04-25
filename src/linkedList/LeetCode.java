@@ -36,6 +36,7 @@ public class LeetCode {
 
 	}
 	
+	
 	public SingleLinkedList swapPos(SingleLinkedList sll, int left, int right) {
 		Node node=sll.head;
 		Node runner=null;
