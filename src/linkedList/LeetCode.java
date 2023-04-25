@@ -51,6 +51,7 @@ public class LeetCode {
 	
 		
 		
+		
 		while(node!=null) {
 			if(pos==left) {
 				if(pos==1) {
