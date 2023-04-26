@@ -10,9 +10,12 @@ public class Main {
 		cq.deQueue();
 		cq.deQueue();
 		cq.deQueue();
-		
+		cq.enQueue(3);
+		cq.enQueue(4);
+		cq.deQueue();
+		cq.deQueue();
 		System.out.println(cq.peek());
-		cq.delete();
+//		cq.delete();
 		cq.toString();  
 	}
 

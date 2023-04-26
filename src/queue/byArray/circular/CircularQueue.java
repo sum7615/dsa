@@ -28,7 +28,7 @@ public class CircularQueue {
 	public boolean isFull() {
 		if (beginingOfQueue == 0 && topOfQueue == size - 1) {
 			return true;
-		} else if (topOfQueue+1 == beginingOfQueue) {
+		} else if (topOfQueue + 1 == beginingOfQueue) {
 			return true;
 		} else {
 			return false;
@@ -40,15 +40,18 @@ public class CircularQueue {
 		if (isFull()) {
 			System.out.println("Queue is full");
 			return;
-		} else if (isEmpty()) {
-			beginingOfQueue = 0;
-			topOfQueue++;
-			arr[topOfQueue] = value;
 		} else {
-			if (topOfQueue + 1 == size) {
-				topOfQueue = 0;
-			} else {
+
+			if (isEmpty()) {
+				beginingOfQueue = 0;
 				topOfQueue++;
+			} else {
+				if (topOfQueue + 1 == size) {
+					topOfQueue = 0;
+				} else {
+					topOfQueue++;
+				}
+				
 			}
 			arr[topOfQueue] = value;
 		}
@@ -79,18 +82,20 @@ public class CircularQueue {
 		if (isEmpty()) {
 			System.out.println("The queue is e4mpty");
 			return -1;
-		}else {
+		} else {
 			return arr[beginingOfQueue];
 		}
 	}
-	//Delete the queue
+
+	// Delete the queue
 	public void delete() {
-		if(isEmpty()) {
+		if (isEmpty()) {
 			System.out.println("The queue is empty");
-		}else {
+		} else {
 			arr = null;
 		}
 	}
+
 	@Override
 	public String toString() {
 		System.out.println(Arrays.toString(arr));

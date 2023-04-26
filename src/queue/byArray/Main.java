@@ -15,7 +15,7 @@ public class Main {
 //		qu.deQueue();
 //		qu.deQueue();
 		
-//		System.out.println(qu.peek());
+		System.out.println(qu.peek());
 		
 		System.out.println(qu.toString());  
 	}
