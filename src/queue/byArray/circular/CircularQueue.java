@@ -1,5 +1,7 @@
 package queue.byArray.circular;
 
+import java.util.Arrays;
+
 public class CircularQueue {
 	int size;
 	int arr[];
@@ -26,7 +28,7 @@ public class CircularQueue {
 	public boolean isFull() {
 		if (beginingOfQueue == 0 && topOfQueue == size - 1) {
 			return true;
-		} else if (topOfQueue == beginingOfQueue + 1) {
+		} else if (topOfQueue+1 == beginingOfQueue) {
 			return true;
 		} else {
 			return false;
@@ -60,7 +62,7 @@ public class CircularQueue {
 			return -1;
 		} else {
 			int res = arr[beginingOfQueue];
-			arr[8] = Integer.MIN_VALUE;
+			arr[beginingOfQueue] = Integer.MIN_VALUE;
 			if (beginingOfQueue == topOfQueue) {
 				beginingOfQueue = topOfQueue = -1;
 			} else if (beginingOfQueue + 1 == size) {
@@ -88,6 +90,11 @@ public class CircularQueue {
 		}else {
 			arr = null;
 		}
+	}
+	@Override
+	public String toString() {
+		System.out.println(Arrays.toString(arr));
+		return super.toString();
 	}
 
 }
