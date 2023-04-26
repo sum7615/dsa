@@ -39,17 +39,55 @@ public class CircularQueue {
 			System.out.println("Queue is full");
 			return;
 		} else if (isEmpty()) {
-			beginingOfQueue=0;
+			beginingOfQueue = 0;
 			topOfQueue++;
-			arr[topOfQueue]=value;
+			arr[topOfQueue] = value;
 		} else {
-			if(topOfQueue+1==size) {
-				topOfQueue=0;
-			}else {
+			if (topOfQueue + 1 == size) {
+				topOfQueue = 0;
+			} else {
 				topOfQueue++;
 			}
 			arr[topOfQueue] = value;
 		}
 
 	}
+
+//	deQueue
+	public int deQueue() {
+		if (isEmpty()) {
+			System.out.println("The queue is empty");
+			return -1;
+		} else {
+			int res = arr[beginingOfQueue];
+			arr[8] = Integer.MIN_VALUE;
+			if (beginingOfQueue == topOfQueue) {
+				beginingOfQueue = topOfQueue = -1;
+			} else if (beginingOfQueue + 1 == size) {
+				beginingOfQueue = 0;
+			} else {
+				beginingOfQueue++;
+			}
+			return res;
+		}
+	}
+
+//	peek
+	public int peek() {
+		if (isEmpty()) {
+			System.out.println("The queue is e4mpty");
+			return -1;
+		}else {
+			return arr[beginingOfQueue];
+		}
+	}
+	//Delete the queue
+	public void delete() {
+		if(isEmpty()) {
+			System.out.println("The queue is empty");
+		}else {
+			arr = null;
+		}
+	}
+
 }
