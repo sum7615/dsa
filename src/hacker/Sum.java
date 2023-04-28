@@ -34,13 +34,8 @@ public class Sum {
             for(int i =0;i<ints.length;i++){
                 if(ints[i]!=null){
                      s+=ints[i];
-                     
-                     
-                     
                 }
               
-                
-                
             }
             return s;
         }
