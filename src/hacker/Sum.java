@@ -35,6 +35,7 @@ public class Sum {
                 if(ints[i]!=null){
                      s+=ints[i];
                      
+                     
                 }
               
                 
