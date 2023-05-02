@@ -11,9 +11,15 @@ public class Main {
 		List<Integer> ll = Arrays.asList(396285104,573261094,759641832,819230764,364801279);
 
 //		er.plusMinus(ll);
-		minMax.miniMaxSum(ll);
+//		minMax.miniMaxSum(ll);
+		
+		TimeConversion tc = new TimeConversion();
+		System.out.println(tc.timeConversion("12:45:54PM"));
+		
+		
+		
 	}
 
 	
 }
-//2093989309 2548418794
+
