@@ -1,13 +1,9 @@
-package hackerrank;
+package problemSolving;
 
 import java.util.List;
 
-public class Main {
-	public static void main(String[] args) {
-
-	}
-
-	public static int getMinMaxLatency(int gNodes, List<Integer> gFrom, List<Integer> gTo, List<Integer> gWeight,int k) {
+public class NetworkLatancy {
+public  int getMinMaxLatency(int gNodes, List<Integer> gFrom, List<Integer> gTo, List<Integer> gWeight,int k) {
 		
 		int n = gNodes;
         int m = gFrom.size();
