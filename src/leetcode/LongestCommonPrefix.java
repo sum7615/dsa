@@ -11,6 +11,7 @@ public class LongestCommonPrefix {
 				for (int k = 0; k < ch.length; k++) {
 					if(ch[k]==ch2[k]) {
 						strBuilder.append(false)
+						
 					}
 				}
 
