@@ -14,7 +14,11 @@ public class Main {
 //		minMax.miniMaxSum(ll);
 		
 		TimeConversion tc = new TimeConversion();
-		System.out.println(tc.timeConversion("12:45:54PM"));
+//		System.out.println(tc.timeConversion("12:45:54PM"));
+		MatchingStrings ms =new MatchingStrings();
+		List<String> strings =Arrays.asList("ab","ab","abc");
+		List<String> queries=Arrays.asList("ab","abc","bc");
+		ms.matchingStrings(strings, queries);
 		
 		
 		
