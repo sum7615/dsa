@@ -5,7 +5,6 @@ import java.util.Map;
 import java.util.Stack;
 
 
-
 public class Parentheses {
 	public boolean isValid(String s) {
 		Stack<Character> stack = new Stack<>();
