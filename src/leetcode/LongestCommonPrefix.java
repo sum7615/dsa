@@ -1,25 +1,21 @@
 package leetcode;
 
+import java.util.Arrays;
+
 public class LongestCommonPrefix {
 	public String longestCommonPrefix(String[] strs) {
-		StringBuilder strBuilder = new StringBuilder();
-		for (int i = 0; i < strs.length; i++) {
-
-			for (int j = 1; j < strs.length; j++) {
-				char[] ch = strs[i].toCharArray();
-				char[] ch2 = strs[j].toCharArray();
-				for (int k = 0; k < ch.length; k++) {
-					if(ch[k]==ch2[k]) {
-						strBuilder.append(false)
-						
-						
-						
-						
-					}
-				}
-
-			}
-		}
-		return "";
+		
+		Arrays.sort(strs);
+        String s1 = strs[0];
+        String s2 = strs[strs.length-1];
+        int idx = 0;
+        while(idx < s1.length() && idx < s2.length()){
+            if(s1.charAt(idx) == s2.charAt(idx)){
+                idx++;
+            } else {
+                break;
+            }
+        }
+        return s1.substring(0, idx);
 	}
 }
