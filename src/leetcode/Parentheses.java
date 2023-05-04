@@ -15,6 +15,7 @@ public class Parentheses {
 	            } else {
 	                if (stack.empty()) {
 	                    return false;
+	                    
 	                }
 	                if (c == ')' && stack.peek() == '(') {
 	                    stack.pop();
