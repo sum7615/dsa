@@ -2,9 +2,6 @@ package stack.byLinkedList;
 
 public class Stack {
 	LinkedList linkedList=new LinkedList();
-
-
-
 	public boolean isEmpty() {
 		if (linkedList.head == null) {
 			return true;
