@@ -5,7 +5,6 @@ public class Main {
 		
 		
 //		SingleLinkedList sll = new SingleLinkedList();
-		LeetCode leetCode = new LeetCode();
 //		sll.createSinglyLinkedList(1);
 //		sll.insertIntoSingleLinkedList(1, 8);
 //		sll.insertIntoSingleLinkedList(2, 9);
@@ -24,13 +23,26 @@ public class Main {
 //		leetCode.swapPos(sll, 3, 4).treaversal();;
 		
 		
-		System.out.println(leetCode.romanToDecimal("III"));
+//		System.out.println(leetCode.romanToDecimal("III"));
 
 		
 //		sll.treaversal();
 
+		LeetCode leetCode = new LeetCode();
+		SingleLinkedList sll = new SingleLinkedList();
+		SingleLinkedList sll2 = new SingleLinkedList();
+		sll.createSinglyLinkedList(1);
+		sll.insertIntoSingleLinkedList(1, 2);
+		sll.insertIntoSingleLinkedList(2, 4);
 		
+		sll2.createSinglyLinkedList(1);
+		sll2.insertIntoSingleLinkedList(4, 3);
+		sll2.insertIntoSingleLinkedList(5, 4);
+		Node kk = leetCode.mergeTwoLists(sll.head, sll2.head);
 		
+		while(kk.next!=null) {
+			System.out.println(kk.value+"=>");
+		}
 		
 	}
 

@@ -122,15 +122,32 @@ public class LeetCode {
 	}
 
 	public String longestCommonPrefix(String[] strs) {
-		
-		StringBuilder s=new StringBuilder();
+
+		StringBuilder s = new StringBuilder();
 		String first = strs[0];
-		for (int i=0;i<strs.length-1;) {
-			
+		for (int i = 0; i < strs.length - 1;) {
+
 		}
-		
+
 		return s.toString();
 
+	}
+
+	public Node mergeTwoLists(Node list1, Node list2) {
+		SingleLinkedList sll = new SingleLinkedList();
+		sll.createSinglyLinkedList(list1.value);
+		sll.insertIntoSingleLinkedList(1, list2.value);
+	
+//		while(list1.next!=null && list2.next!=null) {
+//			insertInTail(sll, list1.next);
+//			insertInTail(sll, list2.next);
+//		}
+		return sll.head;
+	}
+	public void insertInTail(SingleLinkedList sll, Node node) {
+		sll.tail.next=node;
+		sll.tail=node;
+		node.next=null;
 	}
 
 }
