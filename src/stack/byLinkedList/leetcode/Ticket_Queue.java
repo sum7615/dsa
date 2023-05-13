@@ -33,6 +33,7 @@ public class Ticket_Queue {
 			}else if(temp.value == 1 && temp.key == k) {
 				return count;
 			}
+			
 
 		}
 		return count;
