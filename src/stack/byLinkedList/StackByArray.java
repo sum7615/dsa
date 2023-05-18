@@ -48,6 +48,7 @@ public class StackByArray {
 			return -1;
 		} else {
 			int res = arr[topOfStack];
+			arr[topOfStack]=Integer.MIN_VALUE;
 			topOfStack--;
 			return res;
 		}

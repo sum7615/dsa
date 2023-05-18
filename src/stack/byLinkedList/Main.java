@@ -9,7 +9,10 @@ public class Main {
 		newStack.push(4);
 		newStack.push(5);
 		newStack.details();
+		System.out.println(newStack.popAt(0));
 //		System.out.println(newStack.popAt(0));
+		
+		newStack.details();
 //		System.out.println(newStack.popAt(0));
 	}
 }
