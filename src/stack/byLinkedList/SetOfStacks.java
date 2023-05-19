@@ -8,6 +8,7 @@ public class SetOfStacks {
 	
 	
 	
+	
 	int subSTacksize;
 //	private List<Integer> elements = new ArrayList<Integer>();
 	private List<StackByArray> listOfStack = new ArrayList<StackByArray>();
