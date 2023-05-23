@@ -7,8 +7,6 @@ import java.util.List;
 public class SetOfStacks {
 	
 	
-	
-	
 		
 	
 	int subSTacksize;
