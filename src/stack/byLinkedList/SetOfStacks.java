@@ -11,6 +11,7 @@ public class SetOfStacks {
 //	private List<Integer> elements = new ArrayList<Integer>();
 	private List<StackByArray> listOfStack = new ArrayList<StackByArray>();
 	public SetOfStacks(int subSTacksize) {
+		
 		this.subSTacksize = subSTacksize;
 		listOfStack.add(new StackByArray());
 	}
