@@ -22,7 +22,6 @@ public class SetOfStacks {
 
 	}
 
-	
 	public void details() {
 		System.out.println();
 		System.out.println("=============================================");
