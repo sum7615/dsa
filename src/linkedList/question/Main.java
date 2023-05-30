@@ -226,7 +226,6 @@ public class Main {
 		}
 	}	
 	
-	
 
 	public static int nthValueFromLastNode(SinglyLinkedList sll, int n) {
 		Node node = sll.head;
