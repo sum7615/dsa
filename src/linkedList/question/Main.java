@@ -224,8 +224,7 @@ public class Main {
 			}
 			temp = temp.next;
 		}
-	}
-	
+	}	
 	
 	
 
