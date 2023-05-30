@@ -224,8 +224,7 @@ public class Main {
 			}
 			temp = temp.next;
 		}
-	}		
-
+	}	
 	public static int nthValueFromLastNode(SinglyLinkedList sll, int n) {
 		Node node = sll.head;
 		for (int i = 0; i < sll.size - n - 1; i++) {
