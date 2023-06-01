@@ -9,6 +9,7 @@ public class ArrayLists {
 	public static void main(String[] args) {
 		
 		
+		
 //		Creating ArrayList: Time and space complexity O(1)
 		
 //		Heterogenious data type
