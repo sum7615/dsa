@@ -14,7 +14,6 @@ public class ArrayLists {
 		
 		
 		
-
 //		Heterogenious data type
 		ArrayLists arrayList = new ArrayLists();
 		
