@@ -10,6 +10,7 @@ public class ArrayLists {
 //		Creating ArrayList: Time and space complexity O(1)
 		
 		
+		
 //		Heterogenious data type
 		ArrayLists arrayList = new ArrayLists();
 		
