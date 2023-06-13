@@ -6,6 +6,9 @@ import java.util.Scanner;
 
 
 // Demo of git
+
+
+//Changing the code in beetween 
 public class AvgTemp {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
