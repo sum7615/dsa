@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 //need of git puill before pushing
 
-
 // Demo of git
 
 
