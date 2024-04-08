@@ -36,7 +36,6 @@ public class Main {
 	public LinkedList<Integer> reverseLinkedList(LinkedList<Integer> link){
 		LinkedList<Integer> reverse = new LinkedList<>();
 		
-	
 		
 		reverse.add(link.getLast());
 		
